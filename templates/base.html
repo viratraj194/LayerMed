@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <title>LayerMed | Interactive Anatomy & Pathology</title>
+    <meta name="description" content="An interactive, layer-by-layer exploration of human anatomy and pathology.">
+    <meta name="author" content="LayerMed">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Vite Built Assets (No Hashing) -->
+    <link rel="stylesheet" href="{% static 'dist/style.css' %}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="antialiased m-0 p-0 w-full min-h-screen overflow-x-hidden bg-black text-white">
+    {% block content %}
+    {% endblock %}
+    
+    <!-- Vite Built JS -->
+    <script type="module" src="{% static 'dist/main.js' %}"></script>
+    
+    {% block extra_scripts %}
+    {% endblock %}
+</body>
+</html>

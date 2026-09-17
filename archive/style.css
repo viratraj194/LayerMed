@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: transparent;
+    font-family: "Playfair Display", serif;
+}
+
+.background-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+    background-color: #fdfaf6; /* Fallback color for parchment */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.hero-section {
+    position: relative;
+    z-index: 10;
+    padding-top: 4vh;
+    text-align: center;
+}
+
+.intro-text {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    color: #333;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.canvas-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+}
+
+.anatomical-figure {
+    max-height: 70vh;
+    width: auto;
+    /* This eliminates all square edges and blends graphite directly into the paper background */
+    mix-blend-mode: multiply;
+    filter: contrast(1.1);
+}
+
+#webgl-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: auto;
+}
